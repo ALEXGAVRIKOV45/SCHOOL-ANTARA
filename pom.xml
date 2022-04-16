@@ -11,6 +11,7 @@
     <modules>
         <module>hw1GAL</module>
         <module>starterModule</module>
+        <module>hw2GAL</module>
     </modules>
 
     <properties>

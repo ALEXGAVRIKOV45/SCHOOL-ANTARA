@@ -4,20 +4,18 @@ import java.util.Random;
 
 public class Kotik {
 	private static int count; // Количество созданных элементов
-	private String name;  // Имя
-	private int weight;   // Вес
-	private String meow;  // Как мяукает
-	private int satiety;  // Степень сытости
-
 	/* Затраты энергии по видам деятельности */
 	final int consumPlay = 3;
 	final int consumSleep = 1;
 	final int consumChaseMouse = 3;
 	final int consumLick = 2;
 	final int consumPhoto = 2;
-
 	/*   Количество еды при приеме пищи */
 	final int food = 10;
+	private String name;  // Имя
+	private int weight;   // Вес
+	private String meow;  // Как мяукает
+	private int satiety;  // Степень сытости
 
 	public Kotik(String name, int weight, String meow, int satiety) {
 		count++;
@@ -31,6 +29,9 @@ public class Kotik {
 		count++;
 	}
 
+	public static int getCount() {
+		return count;
+	}
 
 	public void liveAnotherDay() {
 		Random random = new Random();
@@ -132,9 +133,5 @@ public class Kotik {
 
 	public void setSatiety(int satiety) {
 		this.satiety = satiety;
-	}
-
-	public static int getCount() {
-		return count;
 	}
 }
