@@ -11,7 +11,7 @@
             <class name="NegativeCalcTest"></class>
         </classes>
     </test>
-    <test verbose="2" preserve-order="true" name="BoundaryTest" >
+    <test verbose="2" preserve-order="true" name="BoundaryTest">
         <classes>
             <class name="BoundaryValueCalcTest"></class>
         </classes>

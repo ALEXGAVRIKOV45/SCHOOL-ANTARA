@@ -23,6 +23,7 @@ public class Calculator implements CalculatorService {
 		return (Float.parseFloat(a) * Float.parseFloat(b));
 	}
 
+
 	@Override
 	public Float divideNumbers(String a, String b) throws NumberFormatException {
 		if ((Float.parseFloat(a) < -100) || (Float.parseFloat(b) < -100) ||

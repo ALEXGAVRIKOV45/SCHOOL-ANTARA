@@ -12,12 +12,11 @@ public class BoundaryValueCalcTest {
 		calc = new Calculator();
 	}
 
-
 	@DataProvider(name = "dpOutBoundaryCalc")
 	@Description("Данные для тестов граничных значений")
 	public static Object[][] dpOutBoundaryCalc() {
 		return new Object[][]{
-				{"-101", "-101" }, {"101","101"}
+				{"-101", "-101"}, {"101", "101"}
 		};
 	}
 
@@ -80,7 +79,8 @@ public class BoundaryValueCalcTest {
 				{"50", "0"}
 		};
 	}
-	@Test(description = "Тест деления на НОЛЬ", dataProvider = "dpZeroDivideCalc" )
+
+	@Test(description = "Тест деления на НОЛЬ", dataProvider = "dpZeroDivideCalc")
 	void boundaryZeroCalcDivideTest(String a, String b) {
 		Assert.assertNull(calc.divideNumbers(a, b));
 	}

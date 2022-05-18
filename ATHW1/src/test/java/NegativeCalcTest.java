@@ -12,6 +12,7 @@ public class NegativeCalcTest {
 		calc = new Calculator();
 	}
 
+
 	@DataProvider(name = "dpNegativeCalc")
 	@Description("Данные для негативных тестов")
 	public static Object[][] dpNegCalc() {
