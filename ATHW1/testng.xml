@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="PositiveTest">
+        <classes>
+            <class name="PositiveCalcTest"></class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="NegativeTest">
+        <classes>
+            <class name="NegativeCalcTest"></class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="BoundaryTest" >
+        <classes>
+            <class name="BoundaryValueCalcTest"></class>
+        </classes>
+    </test>
+</suite>
