@@ -10,6 +10,12 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>hw1</module>
+        <module>hw2GALnew</module>
+        <module>hw3GAL</module>
+        <module>ATHW1</module>
+        <module>ATHW2</module>
+        <module>ATHW3</module>
+        <module>ATHW31</module>
     </modules>
 
     <properties>
