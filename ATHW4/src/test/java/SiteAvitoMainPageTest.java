@@ -1,5 +1,4 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
-import io.qameta.allure.Allure;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
@@ -8,12 +7,8 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.logging.LogEntries;
-import org.openqa.selenium.logging.LogEntry;
-import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import ru.yandex.qatools.ashot.Screenshot;
 
 import java.time.Duration;
 
@@ -28,9 +23,6 @@ public class SiteAvitoMainPageTest {
 	private final static String AVITO_PRODUCT_SEARCH = "Принтер";
 	private final static String AVITO_LOCATION = "Владивосток";
 	private final static String AVITO_ADS_SORTING = "Дороже";
-
-
-
 
 	@BeforeAll
 	static void registerDriver() {
@@ -63,22 +55,11 @@ public class SiteAvitoMainPageTest {
 				.clickButtonShowAds()
 				.setSelectSorting(AVITO_ADS_SORTING)
 				.printTitleProduct();
-
 	}
-
 
 	@AfterEach
 	void tearDown() throws InterruptedException {
-//			LogEntries logEntries = driver.manage().logs().get(LogType.BROWSER);
-//			for (LogEntry log : logEntries) {
-//				Allure.addAttachment("Элемент лог браузера", log.getMessage());
-//			}
-
-
-		Thread.sleep(5000);
 		driver.quit();
 	}
-
-
 }
 

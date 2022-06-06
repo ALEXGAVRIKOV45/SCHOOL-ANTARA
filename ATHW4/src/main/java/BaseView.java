@@ -16,6 +16,4 @@ public class BaseView {
 		actions = new Actions(driver);
 		PageFactory.initElements(driver, this);
 	}
-
-
 }

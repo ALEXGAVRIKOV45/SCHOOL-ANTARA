@@ -12,7 +12,6 @@ import java.util.List;
 
 import static org.openqa.selenium.OutputType.BYTES;
 
-
 public class SiteAvitoMainPage extends BaseView {
 
 	@FindBy(xpath = "//select[@name='category_id']")
@@ -39,7 +38,6 @@ public class SiteAvitoMainPage extends BaseView {
 	@FindBy(xpath = "//button[@data-marker='search-filters/submit-button']")
 	public WebElement clickButtonShowAds;
 
-
 	@FindBy(xpath = "//div[contains(@class,'index-topPanel')]//child::select")
 	public Select selectSorting;
 
@@ -49,11 +47,9 @@ public class SiteAvitoMainPage extends BaseView {
 	@FindBy(xpath = "//div[starts-with(@class,'iva-item-priceStep')]")
 	public List<WebElement> priceProduct;
 
-
 	public void makeScreenShot() {
 		Allure.addAttachment("Скриншот",
 				new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(BYTES)));
-
 	}
 
 	@Step("Выбор категории поиска")
@@ -63,7 +59,7 @@ public class SiteAvitoMainPage extends BaseView {
 		return this;
 	}
 
-	@Step("Ввод текста в стрку поиска")
+	@Step("Ввод текста в строку поиска")
 	public SiteAvitoMainPage setInputSearch(String inputSearchText) {
 		inputSearch.sendKeys(inputSearchText);
 		makeScreenShot();
@@ -127,13 +123,13 @@ public class SiteAvitoMainPage extends BaseView {
 		for (int i = 0; i < 3; i++) {
 			System.out.println(titleProduct.get(i).getText());
 			System.out.println(priceProduct.get(i).getText());
+			Allure.addAttachment("Товар " + (i + 1), titleProduct.get(i).getText());
+			Allure.addAttachment("Цена " + (i + 1), priceProduct.get(i).getText());
 		}
 		return this;
 	}
 
-
 	public SiteAvitoMainPage(WebDriver driver) {
 		super(driver);
-
 	}
 }
